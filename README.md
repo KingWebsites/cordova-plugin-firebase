@@ -8,6 +8,7 @@
 4. Add Android keys to plugin.xml in new repository
 5. Add this client's google-services.json to /src/android/ in new repository
 6. Add this client's GoogleService-Info.plist to /src/ios/ in new repository
+7. Before creating IPA and APK files in PhoneGap the respository must be made public. Once this plugin is less than 50MB in size (coming soon) then it can be uploaded to the private repository on PhoneGap Plugins.
 
 # cordova-plugin-firebase
 This plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported.
