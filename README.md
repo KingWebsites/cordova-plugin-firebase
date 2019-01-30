@@ -1,5 +1,13 @@
 [![Build Status](https://travis-ci.org/arnesson/cordova-plugin-firebase.svg?branch=master)](https://travis-ci.org/arnesson/cordova-plugin-firebase)
 
+# Overrides for clients
+
+1. Firebase / Console / Settings. Create an iOS and Android app.
+2. Fork this repository
+3. Add Android keys to plugin.xml
+4. Add this client's google-services.json to /src/android/
+5. Add this client's GoogleService-Info.plist to /src/ios/
+
 # cordova-plugin-firebase
 This plugin brings push notifications, analytics, event tracking, crash reporting and more from Google Firebase to your Cordova project!  Android and iOS supported.
 
