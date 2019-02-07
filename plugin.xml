@@ -9,6 +9,9 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 	<engines>
 		<engine name="cordova" version=">=3.2.0" />
 	</engines>
+	
+	<preference name="APP_GOOGLE_API_ID" />
+    <preference name="APP_GOOGLE_API_KEY" />
 
 	<platform name="android">
 		<hook type="after_plugin_install" src="scripts/android/after_plugin_install.js" />
@@ -24,10 +27,10 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 			</feature>
 		</config-file>
 		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_app_id">## Add Android APP ID here. Should be in format 'numbers:android:alphanums' ##</string>
+			<string name="google_app_id">$APP_GOOGLE_API_ID</string>
 		</config-file>
 		<config-file parent="/resources" target="res/values/strings.xml">
-			<string name="google_api_key">## Add Web API Key here ##</string>
+			<string name="google_api_key">$APP_GOOGLE_API_KEY</string>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
 				<uses-permission android:name="android.permission.INTERNET" />
@@ -50,7 +53,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 			</service>
 			<receiver android:name="org.apache.cordova.firebase.OnNotificationOpenReceiver"></receiver>
 		</config-file>
-		<resource-file src="src/android/google-services.json" target="."/>
+		<!--<resource-file src="src/android/google-services.json" target="."/>-->
 		<resource-file src="src/android/cordova-plugin-firebase-strings.xml" target="res/values/cordova-plugin-firebase-strings.xml" />
 		<source-file src="src/android/FirebasePlugin.java" target-dir="src/org/apache/cordova/firebase" />
 		<source-file src="src/android/OnNotificationOpenReceiver.java" target-dir="src/org/apache/cordova/firebase" />
